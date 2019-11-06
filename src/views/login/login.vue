@@ -1,15 +1,15 @@
 <template>
-  <div id="login">
-    <div class="loginConbox">
+  <div id="login" >
+    <div class="loginConbox"  >
       <div class="header">
-        <!--<div class="logo">-->
-        <!--<img src="../../assets/logo.png">-->
-        <!--</div>-->
+        <div class="logo">
+        <img src="../../assets/logo.png">
+        </div>
       </div>
       <div class="loginBox">
         <div class="loginCon">
-          <p class="title">vue-xuadmin权限管理后台模板</p>
-          <p class="title">前台: vue + element-ui</p>
+          <p class="title">新闻后台管理系统</p>
+          <p class="title">News background management system</p>
           <el-card shadow="always" class="login-module" v-if="smdl">
             <div slot="header" class="clearfix formTitlt">
               <span>密码登录</span>
@@ -53,9 +53,9 @@
                 <i class="iconfont xu-saomadenglu fa-2x iconcolor"></i>
                 <p>打开 微信 扫一扫登录</p>
               </div>
-              <p class="smalltxt">
-                <router-link class="a" to="#">免费注册</router-link>
-              </p>
+<!--              <p class="smalltxt">-->
+<!--                <router-link class="a" to="#">免费注册</router-link>-->
+<!--              </p>-->
             </div>
           </el-card>
         </div>
@@ -69,8 +69,8 @@ export default {
     return {
       smdl: true,
       loginForm: {
-        username: 'vue-xuadmin',
-        password: '123456'
+        username: '',
+        password: ''
       }
     }
   },
@@ -97,32 +97,34 @@ export default {
         })
       }
     },
-    message() {
-      const h = this.$createElement;
-      this.$notify({
-        title: '账号密码',
-        message: h('i', { style: 'color: teal'}, '账号密码可以随意填写，为了测试效果填写的账号将会被存储为临时假 token'),
-        duration: 6000
-      });
-    },
+    // message() {
+    //   const h = this.$createElement;
+    //   this.$notify({
+    //     title: '账号密码',
+    //     message: h('i', { style: 'color: teal'}, '账号密码可以随意填写，为了测试效果填写的账号将会被存储为临时假 token'),
+    //     duration: 6000
+    //   });
+    // },
   },
-  mounted() {
-    this.message()
-  }
+  // mounted() {
+  //   this.message()
+  // }
 }
 </script>
 <style lang="scss">
   #login {
     width: 100%;
     height: 100%;
-    background-color: #2d3a4b;
+    background-color: #2f3640;
+    /*background-image:url("../../assets/inc.jpg");*/
+    /*background-size: 100%;*/
     .loginConbox{
-      background: #2d3a4b;
+      /*background: #2d3a4b;*/
     }
     .header {
       height: 60px;
       position: relative;
-      background: #2d3a4b;
+      /*background: #2d3a4b;*/
       /*border-bottom: 1px solid rgba(255, 255, 255, 0.3);*/
       .logo{
         margin-left: 30px;
@@ -141,10 +143,10 @@ export default {
         color: #409EFF;
       }
 
-      padding: 74px 0 118px;
+      padding: 94px 0 118px;
 
       .loginCon {
-        width: 990px;
+        width: 1150px;
         margin: auto;
         position: relative;
         height: 388px;
@@ -156,11 +158,11 @@ export default {
           font-size: 36px;
           font-weight: 600;
           color: #ffffff;
-          width: 500px;
+          width: 800px;
           float: left;
           margin-top: 0px;
           &:first-child{
-            font-size: 34px;
+            font-size: 36px;
             margin-top: 50px;
             margin-bottom: 30px;
           }

@@ -3,12 +3,12 @@
     <el-aside id="asideNav">
       <div class="logo-name">
         <p v-if="$store.getters.logoShow">XU</p>
-        <p v-else>vue-xuAdmin后台模板</p>
+        <p v-else style="color: #ffffff">新闻后台</p>
       </div>
       <el-menu :default-active="$route.path" class="el-menu-vertical"
                @select="selectmenu"
                :collapse="$store.getters.isCollapse"
-               background-color="#03152A"
+               background-color="#2d3a4b"
                text-color="rgba(255,255,255,.7)"
                active-text-color="#ffffff"
                :router="$store.getters.uniquerouter"
